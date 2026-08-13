@@ -24,7 +24,7 @@ Implement a .NET 8 / C# backend API following DDD and CQRS using MediatR, Fluent
 ---
 
 - [ ] 2. Implement Domain layer — base classes and value objects
-  - [ ] 2.1 Implement `Entity` base class and `IDomainEvent` interface
+  - [x] 2.1 Implement `Entity` base class and `IDomainEvent` interface
     - Create `TMS.Domain/Common/Entity.cs` with `Id`, `CreatedAt`, `UpdatedAt`, private `_domainEvents` list, `AddDomainEvent`, `ClearDomainEvents`, and `DomainEvents` read-only property
     - Create `TMS.Domain/Common/IDomainEvent.cs` with `EventId`, `OccurredAt`, `EventType`
     - _Requirements: 10.1–10.6_
