@@ -56,7 +56,7 @@ Implement a .NET 8 / C# backend API following DDD and CQRS using MediatR, Fluent
     - Implement `Update()`, `SoftDelete()`, `AssignSubject()`, `RemoveSubject()`, `SetAvailability()`, `AssignToCourse()`, `RemoveFromCourse()` with their pre/postconditions as described in design §2.4
     - _Requirements: 1.1, 1.5, 2.1, 3.1, 3.4, 6.1, 6.5, 7.1, 8.1, 8.6, 10.1–10.5_
 
-  - [ ] 3.2 Implement `Subject` aggregate root and `Course` aggregate root
+  - [x] 3.2 Implement `Subject` aggregate root and `Course` aggregate root
     - Create `TMS.Domain/Aggregates/Subjects/Subject.cs` — sealed; `Create()` factory; `SoftDelete()` method
     - Create `TMS.Domain/Aggregates/Courses/Course.cs` — sealed; `Create()` factory
     - _Requirements: 5.1, 5.5_
