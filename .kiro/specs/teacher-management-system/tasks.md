@@ -35,7 +35,7 @@ Implement a .NET 8 / C# backend API following DDD and CQRS using MediatR, Fluent
     - Create `TMS.Domain/ValueObjects/SubjectAssignment.cs` — sealed, immutable; constructor rejects empty `SubjectId`; sets `AssignedAt = DateTime.UtcNow`
     - _Requirements: 7.2, 7.3, 8.2, 8.3, 6.4_
 
-  - [ ]* 2.3 Write property tests for value objects
+  - [x] 2.3 Write property tests for value objects
     - **Property 4: Availability Slot Validity** — for any `AvailabilitySlot`, `StartTime < EndTime` always holds; construction with `StartTime >= EndTime` always throws
     - **Validates: Requirements 7.3**
     - **Property 3: Schedule Conflict Prevention** — for any two non-overlapping time ranges on the same day, `ConflictsWith` returns false; for any overlapping pair, it returns true

@@ -1525,17 +1525,17 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Backend Self Project\\Teacher-Management-System-Backend\\src\\TMS.API\\TMS.API.csproj",
+      "projectUniqueName": "d:\\Backend Self Project\\Teacher-Management-System-Backend\\src\\TMS.API\\TMS.API.csproj",
       "projectName": "TMS.API",
-      "projectPath": "D:\\Backend Self Project\\Teacher-Management-System-Backend\\src\\TMS.API\\TMS.API.csproj",
+      "projectPath": "d:\\Backend Self Project\\Teacher-Management-System-Backend\\src\\TMS.API\\TMS.API.csproj",
       "packagesPath": "C:\\Users\\atahar.uddin\\.nuget\\packages\\",
-      "outputPath": "D:\\Backend Self Project\\Teacher-Management-System-Backend\\src\\TMS.API\\obj\\",
+      "outputPath": "d:\\Backend Self Project\\Teacher-Management-System-Backend\\src\\TMS.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "D:\\Backend Self Project\\Teacher-Management-System-Backend\\NuGet.Config",
+        "d:\\Backend Self Project\\Teacher-Management-System-Backend\\NuGet.Config",
         "C:\\Users\\atahar.uddin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -1550,11 +1550,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\Backend Self Project\\Teacher-Management-System-Backend\\src\\TMS.Application\\TMS.Application.csproj": {
-              "projectPath": "D:\\Backend Self Project\\Teacher-Management-System-Backend\\src\\TMS.Application\\TMS.Application.csproj"
+            "d:\\Backend Self Project\\Teacher-Management-System-Backend\\src\\TMS.Application\\TMS.Application.csproj": {
+              "projectPath": "d:\\Backend Self Project\\Teacher-Management-System-Backend\\src\\TMS.Application\\TMS.Application.csproj"
             },
-            "D:\\Backend Self Project\\Teacher-Management-System-Backend\\src\\TMS.Infrastructure\\TMS.Infrastructure.csproj": {
-              "projectPath": "D:\\Backend Self Project\\Teacher-Management-System-Backend\\src\\TMS.Infrastructure\\TMS.Infrastructure.csproj"
+            "d:\\Backend Self Project\\Teacher-Management-System-Backend\\src\\TMS.Infrastructure\\TMS.Infrastructure.csproj": {
+              "projectPath": "d:\\Backend Self Project\\Teacher-Management-System-Backend\\src\\TMS.Infrastructure\\TMS.Infrastructure.csproj"
             }
           }
         }

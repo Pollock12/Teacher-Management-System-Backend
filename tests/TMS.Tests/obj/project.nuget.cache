@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nu5dd3UMZVw=",
+  "dgSpecHash": "HoIHz0cBZoI=",
   "success": true,
-  "projectFilePath": "D:\\Backend Self Project\\Teacher-Management-System-Backend\\tests\\TMS.Tests\\TMS.Tests.csproj",
+  "projectFilePath": "d:\\Backend Self Project\\Teacher-Management-System-Backend\\tests\\TMS.Tests\\TMS.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\atahar.uddin\\.nuget\\packages\\coverlet.collector\\6.0.2\\coverlet.collector.6.0.2.nupkg.sha512",
     "C:\\Users\\atahar.uddin\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",
