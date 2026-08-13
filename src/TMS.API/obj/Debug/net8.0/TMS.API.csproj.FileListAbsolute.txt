@@ -58,3 +58,4 @@ d:\Backend Self Project\Teacher-Management-System-Backend\src\TMS.API\obj\Debug\
 d:\Backend Self Project\Teacher-Management-System-Backend\src\TMS.API\obj\Debug\net8.0\TMS.API.pdb
 d:\Backend Self Project\Teacher-Management-System-Backend\src\TMS.API\obj\Debug\net8.0\TMS.API.genruntimeconfig.cache
 d:\Backend Self Project\Teacher-Management-System-Backend\src\TMS.API\obj\Debug\net8.0\ref\TMS.API.dll
+D:\Backend Self Project\Teacher-Management-System-Backend\src\TMS.API\obj\Debug\net8.0\TMS.API.sourcelink.json

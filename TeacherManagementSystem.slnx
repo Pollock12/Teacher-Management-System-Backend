@@ -5,4 +5,7 @@
     <Project Path="src/TMS.Domain/TMS.Domain.csproj" />
     <Project Path="src/TMS.Infrastructure/TMS.Infrastructure.csproj" />
   </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/TMS.Tests/TMS.Tests.csproj" />
+  </Folder>
 </Solution>

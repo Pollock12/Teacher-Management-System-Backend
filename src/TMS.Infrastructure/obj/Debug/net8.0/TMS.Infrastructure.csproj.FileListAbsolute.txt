@@ -13,3 +13,4 @@ d:\Backend Self Project\Teacher-Management-System-Backend\src\TMS.Infrastructure
 d:\Backend Self Project\Teacher-Management-System-Backend\src\TMS.Infrastructure\obj\Debug\net8.0\refint\TMS.Infrastructure.dll
 d:\Backend Self Project\Teacher-Management-System-Backend\src\TMS.Infrastructure\obj\Debug\net8.0\TMS.Infrastructure.pdb
 d:\Backend Self Project\Teacher-Management-System-Backend\src\TMS.Infrastructure\obj\Debug\net8.0\ref\TMS.Infrastructure.dll
+D:\Backend Self Project\Teacher-Management-System-Backend\src\TMS.Infrastructure\obj\Debug\net8.0\TMS.Infrastructure.sourcelink.json

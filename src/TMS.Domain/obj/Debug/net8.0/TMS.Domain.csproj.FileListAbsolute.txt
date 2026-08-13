@@ -9,3 +9,4 @@ d:\Backend Self Project\Teacher-Management-System-Backend\src\TMS.Domain\obj\Deb
 d:\Backend Self Project\Teacher-Management-System-Backend\src\TMS.Domain\obj\Debug\net8.0\refint\TMS.Domain.dll
 d:\Backend Self Project\Teacher-Management-System-Backend\src\TMS.Domain\obj\Debug\net8.0\TMS.Domain.pdb
 d:\Backend Self Project\Teacher-Management-System-Backend\src\TMS.Domain\obj\Debug\net8.0\ref\TMS.Domain.dll
+D:\Backend Self Project\Teacher-Management-System-Backend\src\TMS.Domain\obj\Debug\net8.0\TMS.Domain.sourcelink.json

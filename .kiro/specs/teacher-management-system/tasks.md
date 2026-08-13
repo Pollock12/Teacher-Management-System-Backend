@@ -16,7 +16,7 @@ Implement a .NET 8 / C# backend API following DDD and CQRS using MediatR, Fluent
     - Add NuGet packages per project: `MongoDB.Driver` (Infrastructure), `MediatR` + `FluentValidation.AspNetCore` (Application), `Swashbuckle.AspNetCore` (API)
     - _Requirements: all — foundational step_
 
-  - [ ] 1.2 Create test project with required NuGet packages
+  - [-] 1.2 Create test project with required NuGet packages
     - Create `tests/TMS.Tests` (xUnit project) referencing all four source projects
     - Add `xUnit`, `FluentAssertions`, `FsCheck.Xunit`, `Testcontainers.MongoDb`, `Microsoft.NET.Test.Sdk`
     - _Requirements: all — foundational step_
