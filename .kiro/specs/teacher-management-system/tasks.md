@@ -51,7 +51,7 @@ Implement a .NET 8 / C# backend API following DDD and CQRS using MediatR, Fluent
 ---
 
 - [ ] 3. Implement Domain layer — aggregates
-  - [ ] 3.1 Implement `Teacher` aggregate root
+  - [x] 3.1 Implement `Teacher` aggregate root
     - Create `TMS.Domain/Aggregates/Teachers/Teacher.cs` — sealed; private constructor; `Create()` factory sets all fields and raises `TeacherCreated` event
     - Implement `Update()`, `SoftDelete()`, `AssignSubject()`, `RemoveSubject()`, `SetAvailability()`, `AssignToCourse()`, `RemoveFromCourse()` with their pre/postconditions as described in design §2.4
     - _Requirements: 1.1, 1.5, 2.1, 3.1, 3.4, 6.1, 6.5, 7.1, 8.1, 8.6, 10.1–10.5_
