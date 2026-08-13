@@ -9,21 +9,21 @@ Implement a .NET 8 / C# backend API following DDD and CQRS using MediatR, Fluent
 ## Tasks
 
 - [x] 1. Scaffold solution and project structure
-  - [-] 1.1 Create solution file and four source projects with correct project references
+  - [x] 1.1 Create solution file and four source projects with correct project references
     - Create `TeacherManagementSystem.sln`
     - Create `src/TMS.Domain`, `src/TMS.Application`, `src/TMS.Infrastructure`, `src/TMS.API` as class-library / web-api projects targeting .NET 8
     - Add project references: Application → Domain; Infrastructure → Domain; API → Application + Infrastructure
     - Add NuGet packages per project: `MongoDB.Driver` (Infrastructure), `MediatR` + `FluentValidation.AspNetCore` (Application), `Swashbuckle.AspNetCore` (API)
     - _Requirements: all — foundational step_
 
-  - [-] 1.2 Create test project with required NuGet packages
+  - [x] 1.2 Create test project with required NuGet packages
     - Create `tests/TMS.Tests` (xUnit project) referencing all four source projects
     - Add `xUnit`, `FluentAssertions`, `FsCheck.Xunit`, `Testcontainers.MongoDb`, `Microsoft.NET.Test.Sdk`
     - _Requirements: all — foundational step_
 
 ---
 
-- [ ] 2. Implement Domain layer — base classes and value objects
+- [x] 2. Implement Domain layer — base classes and value objects
   - [x] 2.1 Implement `Entity` base class and `IDomainEvent` interface
     - Create `TMS.Domain/Common/Entity.cs` with `Id`, `CreatedAt`, `UpdatedAt`, private `_domainEvents` list, `AddDomainEvent`, `ClearDomainEvents`, and `DomainEvents` read-only property
     - Create `TMS.Domain/Common/IDomainEvent.cs` with `EventId`, `OccurredAt`, `EventType`
@@ -42,7 +42,7 @@ Implement a .NET 8 / C# backend API following DDD and CQRS using MediatR, Fluent
     - **Validates: Requirements 8.3**
     - Use `FsCheck.Xunit` `[Property]` attribute
 
-  - [ ] 2.4 Implement custom domain exceptions
+  - [x] 2.4 Implement custom domain exceptions
     - Create `TMS.Domain/Exceptions/NotFoundException.cs`
     - Create `TMS.Domain/Exceptions/ConflictException.cs`
     - Create `TMS.Domain/Exceptions/DomainRuleException.cs`
