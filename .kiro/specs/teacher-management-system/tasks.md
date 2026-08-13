@@ -29,7 +29,7 @@ Implement a .NET 8 / C# backend API following DDD and CQRS using MediatR, Fluent
     - Create `TMS.Domain/Common/IDomainEvent.cs` with `EventId`, `OccurredAt`, `EventType`
     - _Requirements: 10.1–10.6_
 
-  - [ ] 2.2 Implement value objects: `AvailabilitySlot`, `ScheduleEntry`, `SubjectAssignment`
+  - [x] 2.2 Implement value objects: `AvailabilitySlot`, `ScheduleEntry`, `SubjectAssignment`
     - Create `TMS.Domain/ValueObjects/AvailabilitySlot.cs` — sealed, immutable; constructor enforces `StartTime < EndTime`; implement `Overlaps(DayOfWeek, TimeOnly, TimeOnly)` method
     - Create `TMS.Domain/ValueObjects/ScheduleEntry.cs` — sealed, immutable; constructor enforces `StartTime < EndTime`; implement `ConflictsWith(DayOfWeek, TimeOnly, TimeOnly)` method
     - Create `TMS.Domain/ValueObjects/SubjectAssignment.cs` — sealed, immutable; constructor rejects empty `SubjectId`; sets `AssignedAt = DateTime.UtcNow`
