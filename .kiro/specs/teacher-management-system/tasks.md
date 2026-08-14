@@ -96,7 +96,7 @@ Implement a .NET 8 / C# backend API following DDD and CQRS using MediatR, Fluent
 ---
 
 - [ ] 5. Implement Infrastructure layer
-  - [ ] 5.1 Implement `MongoDbSettings` and `MongoDbContext`
+  - [x] 5.1 Implement `MongoDbSettings` and `MongoDbContext`
     - Create `TMS.Infrastructure/Persistence/MongoDbContext.cs` with strongly-typed collection properties: `Teachers`, `Subjects`, `Courses`, `DomainEvents`
     - Create `MongoDbSettings` class with `ConnectionString` and `DatabaseName` properties
     - _Requirements: 1.6_
