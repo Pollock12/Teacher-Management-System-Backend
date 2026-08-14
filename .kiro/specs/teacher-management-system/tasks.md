@@ -101,7 +101,7 @@ Implement a .NET 8 / C# backend API following DDD and CQRS using MediatR, Fluent
     - Create `MongoDbSettings` class with `ConnectionString` and `DatabaseName` properties
     - _Requirements: 1.6_
 
-  - [ ] 5.2 Implement BSON mapping configuration
+  - [x] 5.2 Implement BSON mapping configuration
     - Create `TMS.Infrastructure/Persistence/Mappings/BsonMappingConfiguration.cs`
     - Register `GuidSerializer` (Standard representation), `TimeOnlySerializer`, `DateOnlySerializer`
     - Register class maps for `Teacher`, `Subject`, `Course` — unmapping `DomainEvents` from the document
