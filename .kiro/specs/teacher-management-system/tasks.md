@@ -61,7 +61,7 @@ Implement a .NET 8 / C# backend API following DDD and CQRS using MediatR, Fluent
     - Create `TMS.Domain/Aggregates/Courses/Course.cs` — sealed; `Create()` factory
     - _Requirements: 5.1, 5.5_
 
-  - [ ] 3.3 Implement domain events
+  - [x] 3.3 Implement domain events
     - Create `TMS.Domain/Aggregates/Teachers/Events/DomainEventBase.cs` — abstract record with `EventId` and `OccurredAt` defaults
     - Create `TeacherCreated.cs`, `TeacherUpdated.cs`, `TeacherDeleted.cs`, `SubjectAssignedToTeacher.cs`, `TeacherAssignedToCourse.cs` event records in the same folder
     - _Requirements: 10.1–10.5_
