@@ -85,8 +85,8 @@ Implement a .NET 8 / C# backend API following DDD and CQRS using MediatR, Fluent
 
 ---
 
-- [ ] 4. Implement Domain layer — repository interfaces
-  - [ ] 4.1 Define repository interfaces
+- [x] 4. Implement Domain layer — repository interfaces
+  - [-] 4.1 Define repository interfaces
     - Create `TMS.Domain/Repositories/ITeacherRepository.cs` with `GetByIdAsync`, `GetByEmailAsync`, `GetPagedAsync`, `GetAvailableAsync`, `AddAsync`, `UpdateAsync`
     - Create `TMS.Domain/Repositories/ISubjectRepository.cs` with `GetByIdAsync`, `GetByNameAsync`, `GetAllActiveAsync`, `AddAsync`, `UpdateAsync`, `IsAssignedToAnyTeacherAsync`
     - Create `TMS.Domain/Repositories/ICourseRepository.cs` with `GetByIdAsync`, `AddAsync`
