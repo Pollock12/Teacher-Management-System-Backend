@@ -107,7 +107,7 @@ Implement a .NET 8 / C# backend API following DDD and CQRS using MediatR, Fluent
     - Register class maps for `Teacher`, `Subject`, `Course` — unmapping `DomainEvents` from the document
     - _Requirements: 1.1, 1.6_
 
-  - [ ] 5.3 Implement `TeacherRepository`
+  - [x] 5.3 Implement `TeacherRepository`
     - Create `TMS.Infrastructure/Persistence/Repositories/TeacherRepository.cs` implementing `ITeacherRepository`
     - `GetByIdAsync`: filter `IsDeleted == false && Id == id`
     - `GetByEmailAsync`: filter `IsDeleted == false && Email == email`
