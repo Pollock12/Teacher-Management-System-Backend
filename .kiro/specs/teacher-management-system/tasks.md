@@ -121,7 +121,7 @@ Implement a .NET 8 / C# backend API following DDD and CQRS using MediatR, Fluent
     - Create `CourseRepository.cs` implementing `ICourseRepository`
     - _Requirements: 5.3, 5.6, 8.4, 8.5_
 
-  - [ ] 5.5 Implement `DomainEventRepository` and `DomainEventDocument`
+  - [x] 5.5 Implement `DomainEventRepository` and `DomainEventDocument`
     - Create `DomainEventRepository.cs` implementing `IDomainEventRepository`; serialize each `IDomainEvent` to JSON payload and bulk-insert into `domain_events` collection
     - Define `DomainEventDocument` class with `Id`, `EventType`, `OccurredAt`, `Payload` (JSON string)
     - _Requirements: 10.6_
