@@ -142,8 +142,8 @@ Implement a .NET 8 / C# backend API following DDD and CQRS using MediatR, Fluent
 
 ---
 
-- [ ] 6. Implement Application layer — shared infrastructure
-  - [ ] 6.1 Implement DTOs and `PagedResult` wrapper
+- [x] 6. Implement Application layer — shared infrastructure
+  - [-] 6.1 Implement DTOs and `PagedResult` wrapper
     - Create `TMS.Application/Teachers/DTOs/TeacherDto.cs`, `TeacherSummaryDto.cs`, `AvailabilitySlotDto.cs`, `ScheduleEntryDto.cs`, `SubjectAssignmentDto.cs`
     - Create `TMS.Application/Common/PagedResult.cs` generic record with `Items`, `TotalCount`, `PageNumber`, `PageSize`
     - Create `TMS.Application/Subjects/DTOs/SubjectDto.cs`
