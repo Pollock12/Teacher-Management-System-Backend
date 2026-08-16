@@ -116,7 +116,7 @@ Implement a .NET 8 / C# backend API following DDD and CQRS using MediatR, Fluent
     - `AddAsync`, `UpdateAsync` (replace-one)
     - _Requirements: 1.4, 2.3, 3.3, 4.3, 4.4, 4.5, 7.6_
 
-  - [ ] 5.4 Implement `SubjectRepository` and `CourseRepository`
+  - [x] 5.4 Implement `SubjectRepository` and `CourseRepository`
     - Create `SubjectRepository.cs` implementing `ISubjectRepository`; implement `IsAssignedToAnyTeacherAsync` via filter on `teachers` collection's `subjectAssignments` array
     - Create `CourseRepository.cs` implementing `ICourseRepository`
     - _Requirements: 5.3, 5.6, 8.4, 8.5_
