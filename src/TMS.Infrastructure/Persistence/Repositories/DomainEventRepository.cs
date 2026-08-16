@@ -27,14 +27,27 @@ public sealed class DomainEventRepository : IDomainEventRepository
         if (eventList.Count == 0)
             return;
 
+        // It's converting Domain Event to DomainEventDocument
         var documents = eventList.Select(domainEvent => new DomainEventDocument
         {
             Id          = Guid.NewGuid(),
             EventType   = domainEvent.EventType,
             OccurredAt  = domainEvent.OccurredAt,
+            //It converts the C# event object into JSON text
+            // domainEvent -> TeacherCreated object -> GetType() -> TeacherCreated
             Payload     = JsonSerializer.Serialize(domainEvent, domainEvent.GetType())
         }).ToList();
 
+        // This is called a bulk insert
         await _context.DomainEvents.InsertManyAsync(documents, cancellationToken: ct);
     }
 }
+
+/*
+  Teacher created -> TeacherCreated event created -> Event stored inside Teacher.DomainEvents -> DomainEventRepository receives the event 
+  -> Converts event → DomainEventDocument -> Converts event data → JSON -> InsertManyAsync() -> MongoDB -> domain_events collection
+
+  DomainEventRepository takes important events that happened in your Domain layer, converts them into MongoDB documents, 
+  and stores them as an event history in the domain_events collection.
+
+*/
