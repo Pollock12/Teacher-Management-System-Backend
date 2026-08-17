@@ -150,12 +150,12 @@ Implement a .NET 8 / C# backend API following DDD and CQRS using MediatR, Fluent
     - Create `TMS.Application/Courses/DTOs/CourseDto.cs`
     - _Requirements: 4.3, 4.5, 4.6_
 
-  - [ ] 6.2 Implement `ValidationBehavior` MediatR pipeline behavior
+  - [x] 6.2 Implement `ValidationBehavior` MediatR pipeline behavior
     - Create `TMS.Application/Common/Behaviors/ValidationBehavior.cs`
     - Inject `IEnumerable<IValidator<TRequest>>`; run all validators; collect failures; throw `ValidationException` if any failures exist; otherwise call `next()`
     - _Requirements: 9.1_
 
-  - [ ] 6.3 Add mapping extension methods for aggregates to DTOs
+  - [x] 6.3 Add mapping extension methods for aggregates to DTOs
     - Create `TMS.Application/Teachers/DTOs/TeacherMappingExtensions.cs` with `ToDto()` extension on `Teacher`
     - _Requirements: 1.5, 2.5, 4.1_
 
