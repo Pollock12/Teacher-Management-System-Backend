@@ -162,7 +162,7 @@ Implement a .NET 8 / C# backend API following DDD and CQRS using MediatR, Fluent
 ---
 
 - [ ] 7. Implement Application layer — Teacher commands
-  - [ ] 7.1 Implement `CreateTeacherCommand`, validator, and handler
+  - [x] 7.1 Implement `CreateTeacherCommand`, validator, and handler
     - Create command record `CreateTeacherCommand(FirstName, LastName, Email, PhoneNumber?, DateOfBirth?, Address?) : IRequest<TeacherDto>`
     - Create `CreateTeacherCommandValidator` — `NotEmpty` + `MaximumLength(100)` for names; `NotEmpty` + `EmailAddress` + `MaximumLength(255)` for email
     - Implement `CreateTeacherCommandHandler`: check email uniqueness → `ConflictException`; call `Teacher.Create()`; persist domain events; call `AddAsync`; return mapped `TeacherDto`
