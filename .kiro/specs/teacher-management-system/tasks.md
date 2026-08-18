@@ -161,7 +161,7 @@ Implement a .NET 8 / C# backend API following DDD and CQRS using MediatR, Fluent
 
 ---
 
-- [ ] 7. Implement Application layer — Teacher commands
+- [x] 7. Implement Application layer — Teacher commands
   - [x] 7.1 Implement `CreateTeacherCommand`, validator, and handler
     - Create command record `CreateTeacherCommand(FirstName, LastName, Email, PhoneNumber?, DateOfBirth?, Address?) : IRequest<TeacherDto>`
     - Create `CreateTeacherCommandValidator` — `NotEmpty` + `MaximumLength(100)` for names; `NotEmpty` + `EmailAddress` + `MaximumLength(255)` for email
@@ -208,7 +208,7 @@ Implement a .NET 8 / C# backend API following DDD and CQRS using MediatR, Fluent
     - **Property 3: Schedule Conflict Prevention** — for any teacher with an existing schedule entry, assigning a new overlapping slot on the same day always raises `DomainRuleException`; non-overlapping slots always succeed
     - **Validates: Requirements 8.3**
 
-  - [ ] 7.10 Implement `RemoveTeacherFromCourseCommand` and handler
+  - [x] 7.10 Implement `RemoveTeacherFromCourseCommand` and handler
     - Create command record `RemoveTeacherFromCourseCommand(TeacherId, CourseId) : IRequest`
     - Implement handler: load teacher → `NotFoundException`; `teacher.RemoveFromCourse()` → `NotFoundException` if entry not found; `UpdateAsync`
     - _Requirements: 8.6_
