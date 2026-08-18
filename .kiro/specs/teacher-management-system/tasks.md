@@ -198,7 +198,7 @@ Implement a .NET 8 / C# backend API following DDD and CQRS using MediatR, Fluent
     - Implement handler: load teacher → `NotFoundException`; map inputs to `AvailabilitySlot` value objects; `teacher.SetAvailability(slots)`; `UpdateAsync`
     - _Requirements: 7.1–7.4_
 
-  - [ ] 7.8 Implement `AssignTeacherToCourseCommand`, validator, and handler
+  - [x] 7.8 Implement `AssignTeacherToCourseCommand`, validator, and handler
     - Create command with `TeacherId`, `CourseId`, `DayOfWeek`, `StartTime`, `EndTime`
     - Create validator: `NotEmpty` for IDs; `StartTime < EndTime`
     - Implement handler: load teacher → `NotFoundException`; load course → `NotFoundException`; `teacher.AssignToCourse()` → `DomainRuleException` on conflict; persist events; `UpdateAsync`
