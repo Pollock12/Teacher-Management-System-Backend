@@ -172,7 +172,7 @@ Implement a .NET 8 / C# backend API following DDD and CQRS using MediatR, Fluent
     - **Property 1: Email Uniqueness** — attempting to create two teachers with the same email always raises `ConflictException`, regardless of the other field values
     - **Validates: Requirements 1.4**
 
-  - [ ] 7.3 Implement `UpdateTeacherCommand`, validator, and handler
+  - [x] 7.3 Implement `UpdateTeacherCommand`, validator, and handler
     - Create command record and `UpdateTeacherCommandValidator` — at-least-one-field rule + optional email format check
     - Implement handler: load by ID → `NotFoundException`; check email uniqueness if changed → `ConflictException`; call `teacher.Update()`; persist events; call `UpdateAsync`; return `TeacherDto`
     - _Requirements: 2.1–2.5, 9.2, 9.3, 10.2_
