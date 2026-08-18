@@ -187,7 +187,7 @@ Implement a .NET 8 / C# backend API following DDD and CQRS using MediatR, Fluent
     - Implement handler: load teacher → `NotFoundException`; load subject → `NotFoundException`; call `teacher.AssignSubject()` → `ConflictException` on duplicate; persist events; `UpdateAsync`
     - _Requirements: 6.1–6.4, 9.2, 9.3, 10.4_
 
-  - [ ] 7.6 Implement `RemoveSubjectFromTeacherCommand` and handler
+  - [x] 7.6 Implement `RemoveSubjectFromTeacherCommand` and handler
     - Create command record
     - Implement handler: load teacher → `NotFoundException`; call `teacher.RemoveSubject()` → `NotFoundException` if not assigned; `UpdateAsync`
     - _Requirements: 6.5_
