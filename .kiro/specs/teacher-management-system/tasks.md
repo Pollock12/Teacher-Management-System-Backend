@@ -177,7 +177,7 @@ Implement a .NET 8 / C# backend API following DDD and CQRS using MediatR, Fluent
     - Implement handler: load by ID → `NotFoundException`; check email uniqueness if changed → `ConflictException`; call `teacher.Update()`; persist events; call `UpdateAsync`; return `TeacherDto`
     - _Requirements: 2.1–2.5, 9.2, 9.3, 10.2_
 
-  - [ ] 7.4 Implement `DeleteTeacherCommand` and handler
+  - [x] 7.4 Implement `DeleteTeacherCommand` and handler
     - Create command record `DeleteTeacherCommand(TeacherId) : IRequest`
     - Implement handler: load by ID → `NotFoundException`; call `teacher.SoftDelete()` (throws `DomainRuleException` if active assignments); persist events; call `UpdateAsync`
     - _Requirements: 3.1–3.4, 9.4, 10.3_
