@@ -182,7 +182,7 @@ Implement a .NET 8 / C# backend API following DDD and CQRS using MediatR, Fluent
     - Implement handler: load by ID → `NotFoundException`; call `teacher.SoftDelete()` (throws `DomainRuleException` if active assignments); persist events; call `UpdateAsync`
     - _Requirements: 3.1–3.4, 9.4, 10.3_
 
-  - [ ] 7.5 Implement `AssignSubjectToTeacherCommand`, validator, and handler
+  - [x] 7.5 Implement `AssignSubjectToTeacherCommand`, validator, and handler
     - Create command and `AssignSubjectToTeacherCommandValidator` (`NotEmpty` for both IDs)
     - Implement handler: load teacher → `NotFoundException`; load subject → `NotFoundException`; call `teacher.AssignSubject()` → `ConflictException` on duplicate; persist events; `UpdateAsync`
     - _Requirements: 6.1–6.4, 9.2, 9.3, 10.4_
