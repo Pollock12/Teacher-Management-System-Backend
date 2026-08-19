@@ -216,7 +216,7 @@ Implement a .NET 8 / C# backend API following DDD and CQRS using MediatR, Fluent
 ---
 
 - [ ] 8. Implement Application layer — Subject commands and query
-  - [ ] 8.1 Implement `CreateSubjectCommand`, validator, and handler
+  - [x] 8.1 Implement `CreateSubjectCommand`, validator, and handler
     - Create command record `CreateSubjectCommand(Name, Description?) : IRequest<SubjectDto>`
     - Create `CreateSubjectCommandValidator` — `NotEmpty` + `MaximumLength(200)` for `Name`
     - Implement handler: check name uniqueness → `ConflictException`; `Subject.Create()`; `AddAsync`; return `SubjectDto`
