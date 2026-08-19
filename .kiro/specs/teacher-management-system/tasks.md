@@ -215,14 +215,14 @@ Implement a .NET 8 / C# backend API following DDD and CQRS using MediatR, Fluent
 
 ---
 
-- [ ] 8. Implement Application layer — Subject commands and query
+- [x] 8. Implement Application layer — Subject commands and query
   - [x] 8.1 Implement `CreateSubjectCommand`, validator, and handler
     - Create command record `CreateSubjectCommand(Name, Description?) : IRequest<SubjectDto>`
     - Create `CreateSubjectCommandValidator` — `NotEmpty` + `MaximumLength(200)` for `Name`
     - Implement handler: check name uniqueness → `ConflictException`; `Subject.Create()`; `AddAsync`; return `SubjectDto`
     - _Requirements: 5.1–5.3_
 
-  - [ ] 8.2 Implement `DeleteSubjectCommand` and handler
+  - [x] 8.2 Implement `DeleteSubjectCommand` and handler
     - Create command record `DeleteSubjectCommand(SubjectId) : IRequest`
     - Implement handler: load subject → `NotFoundException`; check `IsAssignedToAnyTeacherAsync` → `DomainRuleException` if true; `subject.SoftDelete()`; `UpdateAsync`
     - _Requirements: 5.5, 5.6_
