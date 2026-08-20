@@ -250,7 +250,7 @@ Implement a .NET 8 / C# backend API following DDD and CQRS using MediatR, Fluent
     - **Property 9: Pagination Correctness** — `PagedResult.TotalCount` equals the total number of matching documents regardless of `PageSize`; varying `PageNumber` and `PageSize` does not change `TotalCount`
     - **Validates: Requirements 4.5**
 
-  - [ ] 9.5 Implement `GetTeacherAvailabilityQuery` and handler
+  - [x] 9.5 Implement `GetTeacherAvailabilityQuery` and handler
     - Create query record; implement handler: load teacher → `NotFoundException`; map `AvailabilitySlots` to `IReadOnlyList<AvailabilitySlotDto>`
     - _Requirements: 7.5_
 
