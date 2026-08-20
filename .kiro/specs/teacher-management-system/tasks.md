@@ -254,7 +254,7 @@ Implement a .NET 8 / C# backend API following DDD and CQRS using MediatR, Fluent
     - Create query record; implement handler: load teacher → `NotFoundException`; map `AvailabilitySlots` to `IReadOnlyList<AvailabilitySlotDto>`
     - _Requirements: 7.5_
 
-  - [ ] 9.6 Implement `GetAvailableTeachersQuery` and handler
+  - [x] 9.6 Implement `GetAvailableTeachersQuery` and handler
     - Create query record with `DayOfWeek`, `StartTime`, `EndTime`; implement handler calling `repository.GetAvailableAsync`; map to `IReadOnlyList<TeacherSummaryDto>`
     - _Requirements: 7.6_
 

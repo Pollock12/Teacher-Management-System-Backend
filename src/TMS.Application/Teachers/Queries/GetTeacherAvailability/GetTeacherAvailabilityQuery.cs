@@ -8,3 +8,5 @@ namespace TMS.Application.Teachers.Queries.GetTeacherAvailability;
 /// Satisfies Requirement 7.5.
 /// </summary>
 public record GetTeacherAvailabilityQuery(Guid TeacherId) : IRequest<IReadOnlyList<AvailabilitySlotDto>>;
+
+// Show me the availability of this teacher.
