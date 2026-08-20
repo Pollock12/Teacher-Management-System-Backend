@@ -242,7 +242,7 @@ Implement a .NET 8 / C# backend API following DDD and CQRS using MediatR, Fluent
     - **Property 2: Soft-Delete Visibility** — after `SoftDelete()`, `GetTeacherByIdQuery` always returns a `NotFoundException` for that teacher ID
     - **Validates: Requirements 3.3**
 
-  - [ ] 9.3 Implement `GetAllTeachersQuery` and handler
+  - [x] 9.3 Implement `GetAllTeachersQuery` and handler
     - Create query record with filter params and pagination defaults (`PageSize = 20`); implement handler calling `GetPagedAsync`; map to `PagedResult<TeacherSummaryDto>`
     - _Requirements: 4.3–4.6_
 
