@@ -234,7 +234,7 @@ Implement a .NET 8 / C# backend API following DDD and CQRS using MediatR, Fluent
 ---
 
 - [ ] 9. Implement Application layer — all queries
-  - [ ] 9.1 Implement `GetTeacherByIdQuery` and handler
+  - [x] 9.1 Implement `GetTeacherByIdQuery` and handler
     - Create query record; implement handler: load by ID → `NotFoundException` if not found or `IsDeleted`; return `TeacherDto`
     - _Requirements: 4.1, 4.2_
 
