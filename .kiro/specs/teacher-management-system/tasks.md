@@ -262,7 +262,7 @@ Implement a .NET 8 / C# backend API following DDD and CQRS using MediatR, Fluent
     - Create query record; implement handler: load teacher → `NotFoundException`; load each subject by `SubjectId`; map to `IReadOnlyList<SubjectDto>`
     - _Requirements: 6.6_
 
-  - [ ] 9.8 Implement `GetTeacherScheduleQuery` and handler
+  - [x] 9.8 Implement `GetTeacherScheduleQuery` and handler
     - Create query record with optional `DayOfWeek?`; implement handler: load teacher → `NotFoundException`; filter `ScheduleEntries` by day if provided; map to `IReadOnlyList<ScheduleEntryDto>`
     - _Requirements: 8.7, 8.8_
 
