@@ -39,6 +39,44 @@ public sealed class MongoDbContext
     /// <summary>The <c>domain_events</c> collection (append-only event log).</summary>
     public IMongoCollection<DomainEventDocument> DomainEvents =>
         _database.GetCollection<DomainEventDocument>("domain_events");
+
+    /// <summary>
+    /// Creates all required indexes if they do not already exist.
+    /// Safe to call on every application start (MongoDB is idempotent for index creation).
+    /// </summary>
+    public async Task EnsureIndexesAsync(CancellationToken ct = default)
+    {
+        // ── teachers.email — unique sparse ──────────────────────────────────
+        var emailIndex = new CreateIndexModel<Teacher>(
+            Builders<Teacher>.IndexKeys.Ascending(t => t.Email),
+            new CreateIndexOptions { Unique = true, Sparse = true, Name = "idx_teachers_email_unique" });
+
+        // ── teachers.isDeleted ──────────────────────────────────────────────
+        var isDeletedIndex = new CreateIndexModel<Teacher>(
+            Builders<Teacher>.IndexKeys.Ascending(t => t.IsDeleted),
+            new CreateIndexOptions { Name = "idx_teachers_isDeleted" });
+
+        // ── teachers.subjectAssignments.subjectId ───────────────────────────
+        var subjectIdIndex = new CreateIndexModel<Teacher>(
+            Builders<Teacher>.IndexKeys.Ascending("subjectAssignments.subjectId"),
+            new CreateIndexOptions { Name = "idx_teachers_subjectAssignments_subjectId" });
+
+        await Teachers.Indexes.CreateManyAsync(
+            new[] { emailIndex, isDeletedIndex, subjectIdIndex }, ct);
+
+        // ── domain_events.occurredAt ────────────────────────────────────────
+        var occurredAtIndex = new CreateIndexModel<DomainEventDocument>(
+            Builders<DomainEventDocument>.IndexKeys.Ascending(e => e.OccurredAt),
+            new CreateIndexOptions { Name = "idx_domainevents_occurredAt" });
+
+        // ── domain_events.eventType ─────────────────────────────────────────
+        var eventTypeIndex = new CreateIndexModel<DomainEventDocument>(
+            Builders<DomainEventDocument>.IndexKeys.Ascending(e => e.EventType),
+            new CreateIndexOptions { Name = "idx_domainevents_eventType" });
+
+        await DomainEvents.Indexes.CreateManyAsync(
+            new[] { occurredAtIndex, eventTypeIndex }, ct);
+    }
 }
 
 /// <summary>

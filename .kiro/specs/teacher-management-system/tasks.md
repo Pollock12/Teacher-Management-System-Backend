@@ -277,8 +277,8 @@ Implement a .NET 8 / C# backend API following DDD and CQRS using MediatR, Fluent
 
 ---
 
-- [ ] 11. Implement Infrastructure layer — MongoDB indexes
-  - [ ] 11.1 Create startup index-creation logic
+- [x] 11. Implement Infrastructure layer — MongoDB indexes
+  - [-] 11.1 Create startup index-creation logic
     - Add an `EnsureIndexesAsync()` method on `MongoDbContext` (or a separate `MongoDbIndexInitializer`) that creates: unique sparse index on `teachers.email`; index on `teachers.isDeleted`; index on `teachers.subjectAssignments.subjectId`; indexes on `domain_events.occurredAt` and `domain_events.eventType`
     - Call this method from `Program.cs` at startup
     - _Requirements: 1.6 (performance — ensures query efficiency)_
