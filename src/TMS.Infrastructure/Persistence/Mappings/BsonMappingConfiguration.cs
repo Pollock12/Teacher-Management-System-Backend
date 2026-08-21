@@ -95,6 +95,10 @@ public static class BsonMappingConfiguration
             cm.MapMember(e => e.CreatedAt).SetElementName("createdAt");
             cm.MapMember(e => e.UpdatedAt).SetElementName("updatedAt");
             cm.SetIgnoreExtraElements(true);
+
+            // DomainEvents lives on Entity — unmap it once here for all subclasses
+            cm.UnmapMember(e => e.DomainEvents);
+            cm.UnmapField("_domainEvents");
         });
     }
 
@@ -115,13 +119,11 @@ public static class BsonMappingConfiguration
             cm.AutoMap();
             cm.SetIgnoreExtraElements(true);
 
-            // Do not persist the domain events collection or its backing field
-            // Domain events are not stored inside Teacher.
-            cm.UnmapMember(t => t.DomainEvents);
-            cm.UnmapField("_domainEvents");
+            // DomainEvents / _domainEvents are already unmapped on the Entity base class map.
+            // Do NOT call UnmapMember/UnmapField here — that would pass a MemberInfo
+            // belonging to Entity into a Teacher class map, causing ArgumentOutOfRangeException.
 
-            // Map private backing fields so MongoDB can hydrate them on load
-           // Store the private _subjectAssignments field as subjectAssignments.
+            // Map private backing fields so MongoDB can hydrate them on load.
             cm.MapField("_subjectAssignments").SetElementName("subjectAssignments");
             cm.MapField("_availabilitySlots").SetElementName("availabilitySlots");
             cm.MapField("_scheduleEntries").SetElementName("scheduleEntries");
@@ -137,8 +139,7 @@ public static class BsonMappingConfiguration
         {
             cm.AutoMap();
             cm.SetIgnoreExtraElements(true);
-            cm.UnmapMember(s => s.DomainEvents);
-            cm.UnmapField("_domainEvents");
+            // DomainEvents / _domainEvents already unmapped on Entity base class map.
         });
     }
 
@@ -151,8 +152,7 @@ public static class BsonMappingConfiguration
         {
             cm.AutoMap();
             cm.SetIgnoreExtraElements(true);
-            cm.UnmapMember(c => c.DomainEvents);
-            cm.UnmapField("_domainEvents");
+            // DomainEvents / _domainEvents already unmapped on Entity base class map.
         });
     }
 
