@@ -323,7 +323,7 @@ Implement a .NET 8 / C# backend API following DDD and CQRS using MediatR, Fluent
       - `GET /api/courses/{id}` → load via `ICourseRepository` and return `CourseDto`
     - _Requirements: 8.4, 8.5 (course must exist before teacher assignment)_
 
-  - [ ] 12.5 Wire up `Program.cs` and `appsettings.json`
+  - [x] 12.5 Wire up `Program.cs` and `appsettings.json`
     - Configure `Program.cs`:
       - Call `BsonMappingConfiguration.Configure()` before any services
       - Register `AddControllers`, `AddEndpointsApiExplorer`, `AddSwaggerGen`

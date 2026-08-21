@@ -1,5 +1,6 @@
 using TMS.Application;
 using TMS.Application.Common.Behaviors;
+using TMS.API.Middleware;
 using TMS.Infrastructure;
 using TMS.Infrastructure.Persistence;
 using TMS.Infrastructure.Persistence.Mappings;
@@ -37,7 +38,8 @@ builder.Services.AddInfrastructure(builder.Configuration);
 var app = builder.Build();
 
 // ── Middleware pipeline ───────────────────────────────────────────────────────
-// TODO: app.UseMiddleware<GlobalExceptionMiddleware>(); // Task 12.1
+// Must be first so every subsequent middleware and controller exception is caught.
+app.UseMiddleware<GlobalExceptionMiddleware>();
 
 if (app.Environment.IsDevelopment())
 {
@@ -77,4 +79,9 @@ app.Run();
    10.Configure endpoints.
    11.Ensure MongoDB indexes.
    12.Run API.
+
+   Program.cs is correctly wired BsonMappingConfiguration.Configure(), 
+   MediatR with ValidationBehavior, AddValidatorsFromAssembly, 
+   AddInfrastructure, Swagger in dev, UseHttpsRedirection,
+   MapControllers and ApplicationAssemblyMarker.
 */
