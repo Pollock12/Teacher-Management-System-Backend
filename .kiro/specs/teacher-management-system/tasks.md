@@ -286,7 +286,7 @@ Implement a .NET 8 / C# backend API following DDD and CQRS using MediatR, Fluent
 ---
 
 - [ ] 12. Implement API layer
-  - [ ] 12.1 Implement `ErrorResponse` model and `GlobalExceptionMiddleware`
+  - [x] 12.1 Implement `ErrorResponse` model and `GlobalExceptionMiddleware`
     - Create `TMS.API/Models/ErrorResponse.cs` with `CorrelationId`, `Status`, `Error`, `Message`, `Details` properties
     - Create `TMS.API/Middleware/GlobalExceptionMiddleware.cs` mapping `ValidationException → 400`, `NotFoundException → 404`, `ConflictException → 409`, `DomainRuleException → 422`, catch-all `Exception → 500` with structured `ErrorResponse` JSON; log unhandled exceptions with `correlationId`
     - _Requirements: 9.1–9.6_
