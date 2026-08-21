@@ -291,7 +291,7 @@ Implement a .NET 8 / C# backend API following DDD and CQRS using MediatR, Fluent
     - Create `TMS.API/Middleware/GlobalExceptionMiddleware.cs` mapping `ValidationException → 400`, `NotFoundException → 404`, `ConflictException → 409`, `DomainRuleException → 422`, catch-all `Exception → 500` with structured `ErrorResponse` JSON; log unhandled exceptions with `correlationId`
     - _Requirements: 9.1–9.6_
 
-  - [ ] 12.2 Implement `TeachersController`
+  - [x] 12.2 Implement `TeachersController`
     - Create `TMS.API/Controllers/TeachersController.cs` with all endpoints as specified in design §2.18:
       - `POST /api/teachers` → `CreateTeacherCommand` → `201 Created`
       - `GET /api/teachers/{id}` → `GetTeacherByIdQuery` → `200 OK`
@@ -310,14 +310,14 @@ Implement a .NET 8 / C# backend API following DDD and CQRS using MediatR, Fluent
     - Define `AssignSubjectRequest` record for the request body of the assign-subject endpoint
     - _Requirements: 1.1–10.6 (all surface via this controller)_
 
-  - [ ] 12.3 Implement `SubjectsController`
+  - [x] 12.3 Implement `SubjectsController`
     - Create `TMS.API/Controllers/SubjectsController.cs`:
       - `POST /api/subjects` → `CreateSubjectCommand` → `201 Created`
       - `GET /api/subjects` → `GetAllSubjectsQuery` → `200 OK`
       - `DELETE /api/subjects/{id}` → `DeleteSubjectCommand` → `204 No Content`
     - _Requirements: 5.1–5.6_
 
-  - [ ] 12.4 Implement `CoursesController`
+  - [x] 12.4 Implement `CoursesController`
     - Create `TMS.API/Controllers/CoursesController.cs`:
       - `POST /api/courses` → create and dispatch a `CreateCourseCommand` (create command + handler if not yet implemented)
       - `GET /api/courses/{id}` → load via `ICourseRepository` and return `CourseDto`
